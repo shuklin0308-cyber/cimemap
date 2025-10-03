@@ -1,13 +1,10 @@
 <?php
-// Простая система без базы данных
 session_start();
 
-// Функция проверки авторизации
 function checkAuth($login, $password) {
     return $login === 'Edma' && $password === '32221';
 }
 
-// Хранилище фильмов в сессии
 if (!isset($_SESSION['films'])) {
     $_SESSION['films'] = [
         ['id' => 1, 'title' => 'Аватар', 'genre' => 'Фантастика', 'year' => 2009],
@@ -16,7 +13,6 @@ if (!isset($_SESSION['films'])) {
     ];
 }
 
-// Функции для работы с фильмами
 function getFilms() {
     return $_SESSION['films'];
 }
