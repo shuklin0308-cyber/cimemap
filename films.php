@@ -9,7 +9,7 @@ include "config.php";
 
 $message = "";
 
-// Добавление фильма
+
 if (isset($_POST['add'])) {
     $title = trim($_POST['title']);
     $genre = trim($_POST['genre']);
