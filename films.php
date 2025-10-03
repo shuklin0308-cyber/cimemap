@@ -24,7 +24,6 @@ if (isset($_POST['add'])) {
     }
 }
 
-// Удаление фильма
 if (isset($_GET['delete'])) {
     $id = intval($_GET['delete']);
     if (deleteFilm($id)) {
@@ -32,7 +31,6 @@ if (isset($_GET['delete'])) {
     }
 }
 
-// Обновление фильма
 if (isset($_POST['update'])) {
     $id = intval($_POST['id']);
     $title = trim($_POST['title']);
